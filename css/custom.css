@@ -160,3 +160,14 @@
   color: white;
   transform: rotateY(180deg);
 }
+
+.flip-card-front img{
+  width: 15rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  .flip-card-front img{
+    width: 20rem;
+  }
+}
