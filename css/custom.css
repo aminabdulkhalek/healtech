@@ -87,7 +87,7 @@
     flex-direction: column !important;
   }
   .our-values img{
-    width: fit-content;
+    width: auto;
     margin: auto;
   }
 }
@@ -373,10 +373,33 @@ h3 {
   padding: 0;
   border-radius: 0;
   border: 0;
-  
   border-top: 4px solid #e55c2c;
 }
 
 .dropdown-item:hover{
   background-color: transparent;
+}
+
+@media screen and (max-width: 600px) {
+  .card__front,
+  .card__back {
+    position: relative;
+  }
+  .card-flipper {
+    height: auto;
+  }
+  .card-flipper.effect__random.flipped .card__back {
+    display: block;
+  }
+  .card__back {
+    display: none;
+  }
+  
+  .card-flipper.effect__hover:hover .card__front {
+    display: none;
+  }
+  
+  .card-flipper.effect__hover:hover .card__back {
+    display: block;
+  }
 }
