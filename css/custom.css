@@ -17,6 +17,7 @@
 }
 .front-img-size {
   width: auto;
+  margin-left: 2rem;
 }
 .div-size {
   width: 48%;
@@ -69,24 +70,26 @@
   .front-img-size {
     width: 60%;
     margin: auto;
+    padding: 0;
+    margin-top: 2rem;
   }
   .div-size {
     width: 100%;
   }
 
-  .hero{
+  .hero {
     padding: 0 !important;
   }
 
-  .hero-text{
+  .hero-text {
     padding: 2rem;
     width: 100% !important;
   }
 
-  .our-values{
+  .our-values {
     flex-direction: column !important;
   }
-  .our-values img{
+  .our-values img {
     width: auto;
     margin: auto;
   }
@@ -226,10 +229,14 @@ h3 {
   z-index: 0;
 }
 .profile-box img {
-  width: auto;
+  width: 250px;
   height: 250px;
   position: relative;
-  border: 5px solid #fff;
+  border: 5px solid #f08762;
+  object-fit: contain;
+  object-position: bottom center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .card-01 .height-fix .card-img-overlay {
@@ -289,8 +296,9 @@ h3 {
 }
 
 .card__back p {
-  font-size: 15px;
-  text-align:justify;
+  font-size: 16px;
+  text-align: justify;
+  color: #172f4b;
 }
 
 .card__front,
@@ -345,8 +353,7 @@ h3 {
   }
 }
 
-
-.site-footer{
+.site-footer {
   padding: 2rem 0 2rem 0 !important;
 }
 
@@ -355,7 +362,7 @@ h3 {
   margin-top: -4px;
 }
 .dropdown-submenu {
-  position:relative;
+  position: relative;
 }
 .dropdown-submenu > .dropdown-menu {
   top: 0;
@@ -367,20 +374,31 @@ h3 {
 .dropdown-menu > li > a:hover:after {
   text-decoration: underline;
   transform: rotate(-90deg);
-} 
+}
 
-.dropdown-menu{
+.dropdown-menu {
   padding: 0;
   border-radius: 0;
   border: 0;
   border-top: 4px solid #e55c2c;
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
   background-color: transparent;
 }
 
-@media screen and (max-width: 600px) {
+.main-section {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+.ai-solution-main {
+  display: flex;
+}
+.ai-solutions {
+  flex: 1;
+}
+
+@media screen and (max-width: 650px) {
   .card__front,
   .card__back {
     position: relative;
@@ -394,12 +412,118 @@ h3 {
   .card__back {
     display: none;
   }
-  
+
   .card-flipper.effect__hover:hover .card__front {
     display: none;
   }
-  
+
   .card-flipper.effect__hover:hover .card__back {
     display: block;
   }
+  .main-section {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .main-section h3 {
+    font-size: 16px !important;
+  }
+
+  .ai-solution-main {
+    display: block;
+  }
+  .ai-solutions {
+    flex: 1;
+    margin: 0 !important;
+  }
 }
+
+.ordered-list {
+  list-style: none;
+  counter-reset: list;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.list-card {
+  --stop: calc(100% / var(--length) * var(--i));
+  --l: 62%;
+  --l2: 88%;
+  --h: calc((var(--i) - 1) * (180 / var(--length)));
+  --c1: hsl(var(--h), 71%, var(--l));
+  --c2: hsl(var(--h), 71%, var(--l2));
+
+  position: relative;
+  counter-increment: list;
+  max-width: 30rem;
+  margin: 2rem auto;
+  padding: 2rem 1rem 1rem;
+  box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  background-color: white;
+}
+
+.list-card::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--c1) var(--stop),
+    var(--c2) var(--stop)
+  );
+}
+
+.value-header {
+  display: flex;
+  align-items: baseline;
+  margin: 0 0 1rem;
+  color: rgb(70 70 70);
+}
+
+.value-header::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  margin-right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  content: counter(list);
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: var(--c1);
+  color: white;
+}
+.slogan{
+  position: relative;
+  margin: 1rem 2rem;
+}
+
+.slogan:before {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  content: open-quote;
+  font-size: 4em;
+  margin-left: -0.4em;
+  margin-top: -0.4em;
+  color: #e55c2c;
+}
+.slogan p {
+  display: inline;
+  font-size: larger;
+}
+
+.slogan:after {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  content: close-quote;
+  font-size: 4em;
+  color: #e55c2c;
+} 
