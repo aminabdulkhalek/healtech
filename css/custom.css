@@ -447,12 +447,12 @@ h3 {
 }
 
 .list-card {
-  --stop: calc(100% / var(--length) * var(--i));
+  --stop: calc(100% / 2);
   --l: 62%;
   --l2: 88%;
   --h: calc((var(--i) - 1) * (180 / var(--length)));
-  --c1: hsl(var(--h), 71%, var(--l));
-  --c2: hsl(var(--h), 71%, var(--l2));
+  --c1: hsl(16, 78%, 54%);
+  --c2: hsl(212, 53%, 19%);
 
   position: relative;
   counter-increment: list;
@@ -525,5 +525,6 @@ h3 {
   position: absolute;
   content: close-quote;
   font-size: 4em;
+  margin-top: -1.555rem;
   color: #e55c2c;
 } 
