@@ -166,6 +166,33 @@ https://templatemo.com/tm-538-digital-trend
   }
 
 
+    /* BUTTON */
+    .contact-btn {
+      background: white;
+      border: 2px solid #e55c2c;
+      border-radius: var(--border-radius-large);
+      padding: 12px 26px 14px 26px;
+      color: var(--secondary-color);
+      font-family: var(--title-font-family);
+      font-size: var(--p-font-size);
+      white-space: nowrap;
+    }
+  
+    .contact-btn.btn-bg {
+      background: var(--white-color);
+      color: var(--secondary-color);
+      /* border-color: transparent; */
+      transition: all .3s ease;
+    }
+    
+    .contact-btn:hover,
+    .contact-btn:focus {
+      background: var(--secondary-color);
+      color: var(--white-color);
+      border-color: transparent;
+    }
+
+
   /*---------------------------------------
      GENERAL               
   -----------------------------------------*/
