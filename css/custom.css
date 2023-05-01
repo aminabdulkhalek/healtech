@@ -567,6 +567,7 @@ h3 {
 .slogan p {
   display: inline;
   font-size: larger;
+  margin: 10px;
 }
 
 .slogan:after {
