@@ -432,6 +432,9 @@ h3 {
 .ai-solutions {
   flex: 1;
 }
+.about-us-nav{
+  width: auto !important;
+}
 
 @media screen and (max-width: 650px) {
   .card__front,
@@ -483,6 +486,10 @@ h3 {
   .main-section h2 {
     font-size: 18px !important;
     margin: 2rem;
+  }
+
+  .about-us-nav{
+    width: 60% !important;
   }
 }
 
