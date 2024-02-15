@@ -603,3 +603,29 @@ h3 {
 ::marker {
   color: #f08762 !important;
 }
+
+.event-img{
+  width: 3rem;
+  height: 3rem;
+  margin-right: 10px;
+}
+
+.upcoming-event{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin:30px 20px
+}
+
+.events h1{
+   margin:30px 20px
+}
+
+.event{
+  font-weight: bold;
+}
+
+.events{
+  min-height: 50vh;
+  margin:30px 20px
+}
